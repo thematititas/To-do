@@ -20,11 +20,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     getJSONData(LISTA_URL).then(function (result) {//verificar el status de comentarios
         if (result.status === "ok") {
-            result.data.forEach(comentario => {//recorre los comentarios
-                showComentario(comentario);
-            });     
+            
         }
-        showComentario(result.data)
+        
         
     });
     document.getElementById("agregar").addEventListener("click", function () {
