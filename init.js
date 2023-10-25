@@ -1,4 +1,4 @@
-const LISTA_URL= "https://raw.githubusercontent.com/thematititas/To-do/e670c76c9ce0e700963a7d1e0beb8078a72d89fc/lista.json?token=GHSAT0AAAAAACJNKOLEVCFGFTIR6YYFOIAOZJZUNRA";
+const LISTA_URL= "https://raw.githubusercontent.com/thematititas/To-do/main/lista.json?token=GHSAT0AAAAAACJNKOLEAI3YOIGBCIB7FULGZJZU42Q";
 
 
 var getJSONData = function (url) {
