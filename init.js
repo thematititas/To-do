@@ -1,26 +1,29 @@
-
-function showComentario(tarea){
-    let nuevaTarea = "";
-    nuevaTarea += ` <div class="tarea"> 
-        <label for="tarea-${tarea}">
-        <input type="checkbox" name="${tarea}" id="tarea-${tarea}"> ${tarea}
-        </label>
-    `
-    document.getElementById("lista").innerHTML += nuevaTarea; 
-}
+const LISTA_URL= "https://raw.githubusercontent.com/thematititas/To-do/e670c76c9ce0e700963a7d1e0beb8078a72d89fc/lista.json?token=GHSAT0AAAAAACJNKOLEVCFGFTIR6YYFOIAOZJZUNRA";
 
 
-function limpiar(){
-    document.getElementById("nueva-tarea").value ="";
-}
+var getJSONData = function (url) {
+    var result = {};
+    showSpinner();
+    return fetch(url)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw Error(response.statusText);
+        }
+      })
+      .then(function (response) {
+        result.status = 'ok';
+        result.data = response;
+        hideSpinner();
+        return result;
+      })
+      .catch(function (error) {
+        result.status = 'error';
+        result.data = error;
+        hideSpinner();
+        return result;
+      });
+  }
 
-document.addEventListener("DOMContentLoaded", function (e) {
-    document.getElementById("agregar").addEventListener("click", function () {
-        if (document.getElementById("nueva-tarea").value) {
-            showComentario(document.getElementById("nueva-tarea").value);
-            limpiar();
-        };
-    });
-
-
-});
+  
