@@ -1,5 +1,12 @@
 const LISTA_URL= "https://raw.githubusercontent.com/thematititas/To-do/main/lista.json?token=GHSAT0AAAAAACJNKOLEAI3YOIGBCIB7FULGZJZU42Q";
 
+var showSpinner = function () {
+  document.getElementById("spinner-wrapper").style.display = "block";
+}
+
+var hideSpinner = function () {
+  document.getElementById("spinner-wrapper").style.display = "none";
+}
 
 var getJSONData = function (url) {
     var result = {};
