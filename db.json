@@ -1,3 +1,11 @@
-{
-    "texto":"hola"
-}
+[
+    {
+        "texto":"baniarme"
+    },
+    {
+        "texto":"hacer comida"
+    },
+    {
+        "texto":"limpiar"
+    }
+]

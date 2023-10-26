@@ -1,4 +1,4 @@
-const LISTA_URL = "https://raw.githubusercontent.com/thematititas/To-do/main/lista.json?token=GHSAT0AAAAAACJNKOLFTPBTFYV4NZKMZHPWZJZVGOA";
+const LISTA_URL = "https://raw.githubusercontent.com/thematititas/To-do/main/db.json";
 
 
 function showComentario(tarea){
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     getJSONData(LISTA_URL).then(function (result) {//verificar el status de comentarios
         if (result.status === "ok") {
-           console.log(result); 
-                
+           showComentario(result.data.texto);
+            
            
         }
     });
