@@ -1,5 +1,3 @@
-const LISTA_URL = "https://raw.githubusercontent.com/thematititas/To-do/main/db.json";
-
 
 function showComentario(tarea){
     let nuevaTarea = "";
@@ -20,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
     getJSONData(LISTA_URL).then(function (result) {//verificar el status de comentarios
         if (result.status === "ok") {
-           showComentario(result.data.texto);
-            
+            result.data.forEach(coment => {
+           showComentario(coment.texto);
+            });
            
         }
     });

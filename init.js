@@ -1,3 +1,4 @@
+const LISTA_URL = "https://raw.githubusercontent.com/thematititas/To-do/main/db.json";
 
 var showSpinner = function () {
   document.getElementById("spinner-wrapper").style.display = "block";
